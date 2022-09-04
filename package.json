@@ -19,11 +19,5 @@
   "homepage": "https://github.com/elkake/lazyload#readme",
   "devDependencies": {
     "gh-pages": "4.0.0"
-  },
-  "dependencies": {
-    "js-hyperscript": "0.1.17"
-  },{
-    "type": "module"
   }
-  
 }
