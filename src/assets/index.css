@@ -1,55 +1,75 @@
+:root {
+  --anaranjado: #ff5b00;
+  --marron: #990000;
+  --verde: #d4d925;
+  --verdeLimon: #ffee63;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+
+  font-family: 'Roboto', sans-serif;
 }
-body{
+body {
   background: #000;
 }
-.datos{
+.datos {
   width: 100%;
-
 }
 
-.datos h3{
-  
+.datos h3 {
   font-weight: bold;
-  margin: auto;
-  font-size: 50px;
-  background: linear-gradient(to bottom,#ee6211,#df8800);
+  text-align: center;
+  background-color: #000;
+  width: 100%;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 48px;
+  color: var(--anaranjado);
+  position: fixed;
+  top: 0;
 }
 .container {
-  
   width: 100%;
   text-align: center;
 }
 
 #images {
-  width: 600px;
+  max-width: 600px;
+  min-width: 250px;
   margin: auto;
   padding: 1rem;
-  
+  margin-top: 30vh;
 }
-
 
 img {
   width: 100%;
+  min-height: 150px;
   border-radius: 12px;
   object-fit: cover;
-  border: 3px solid #c5a900;
+  border: 3px solid var(--verdeLimon);
 }
-.button-container{
+.button-container {
   display: grid;
   padding: 20px 0;
   gap: 8px;
-  background-image: url(https://image.winudf.com/v2/image1/Y29tLmJsd3AuZm94X3NjcmVlbl8zXzE1NTI3NjQ4NzdfMDQz/screen-3.jpg?fakeurl=1&type=.webp);
+  height: 20vh;
+  background-image: url(https://randomfox.ca/images/58.jpg);
   width: 100%;
-  background-position: 50% 50%;
+  background-position: 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 60px;
+  box-shadow: 10px 0 25px #000;
 }
 
-.b{
+.b {
   border: none;
   text-decoration: none;
   padding: 8px 0;
@@ -60,15 +80,69 @@ img {
   margin: auto;
 }
 
-.b:active{
+.b:active {
   box-shadow: none;
 }
 
-.button{
-  background-color:#ee7411 ;
-  color:#000;
+.button {
+  background-color: var(--verde);
+  color: #000;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #eee;
+}
+.button img {
+  border: none;
+  min-height: auto;
+  width: 80%;
+  object-fit: contain;
+}
+.limpiar {
+  background-color: var(--verde);
+  color: #000;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #222;
+}
+.limpiar img {
+  border: none;
+  min-height: auto;
+  width: 80%;
+  object-fit: contain;
 }
 
-.limpiar{
+@media (min-width: 1000px){
+  .button-container{
+    height: 30vh;
+  }
+  .button ,.limpiar{
+    width: 150px;
+  height: 150px;
+  transition: 0.5s ease;
+  }
 
+  .button:hover{
+    background-color: #fff;
+  }
+  .limpiar:hover{
+    background-color: #333;
+  }
+
+  .button:active{
+    box-shadow: 0 0 20px #fff;
+    background-color: #fff;
+  }
+  .limpiar:active{
+    box-shadow: 0 0 20px #fff;
+    background-color: #333;
+  }
+  #images{
+    margin-top: calc(30vh + 60px);
+  }
 }
